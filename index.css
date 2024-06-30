@@ -75,3 +75,13 @@
 .filter{
     display: flex;
 }
+
+.res-menu-logo{
+    height: 400px;
+    width: 400px;
+}
+
+.no-underline{
+    text-decoration: none;
+    color: black;
+}
