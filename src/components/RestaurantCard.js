@@ -5,18 +5,31 @@ const RestaurantCard = (props)=>{
 
     const{name, cuisines, avgRating, sla, cloudinaryImageId} = resData?.info;
     return (
-        <div className="res-card">
+        <div className="m-4 p-4 w-[250px] h-[500px] hover:shadow-xl hover:border rounded-lg">
             <img
-            className="res-logo"
+            className="rounded-lg"
             alt="res-logo"
             src={CDN_URL+cloudinaryImageId}
             />
-            <h3>{name}</h3>
-            <h4>{cuisines.join(", ")}</h4>
-            <h4>{avgRating} stars</h4>
-            <h4>ETA: {sla.deliveryTime} minutes</h4>
+            <h3 className="p-2 font-bold">{name}</h3>
+            <h4 className="p-2 font-light">{cuisines.join(", ")}</h4>
+            <h4 className="p-2 font-light">{avgRating} stars</h4>
+            <h4 className="p-2 font-light">ETA: {sla.deliveryTime} minutes</h4>
         </div>
-    )
+    );
+};
+
+//Higher order component
+export const withStarLabel = (RestaurantCard)=>{
+
+    return(props)=>{
+        return(
+            <div>
+                 <label className="px-1 ml-2 absolute bg-black rounded-lg text-white font-light">stared⭐️</label>
+                 <RestaurantCard {...props}/>
+            </div>
+        )
+    }
 }
 
 export default RestaurantCard;

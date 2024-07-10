@@ -5,30 +5,30 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 const Header = ()=>{
     const [btnName,setBtnName] = useState("Login");
     return (
-        <div className="header">
+        <div className="flex justify-between p-2 bg-purple-100 shadow-lg">
 
             <div className="logo-container">
-                <img className="logo" src={LOGO_URL}></img>
+                <img className="w-32" src={LOGO_URL}></img>
             </div>
 
-            <div className="nav-items">
-                <ul>
-                    <li>
+            <div className="flex items-center">
+                <ul className="flex p-4"> 
+                    <li className="px-4">
                         Online Status:{(useOnlineStatus())?"✅":"🔴"}
                     </li>
-                    <li>
+                    <li className="px-4">
                         <Link className="no-underline" to={'/'}>Home</Link>
                     </li>
-                    <li>
+                    <li className="px-4">
                         <Link  className="no-underline"to={'/about'}>About</Link>
                     </li>
-                    <li>
+                    <li className="px-4">
                         <Link className="no-underline" to={'/contact'}>Contact</Link>
                     </li>
-                    <li>
+                    <li className="px-4">
                         <Link className="no-underline" to={'/grocery'}>Grocery</Link>
                     </li>
-                    <li>Cart</li>
+                    <li className="px-4">Cart</li>
                     <button 
                     className="login"
                     onClick={()=>{
