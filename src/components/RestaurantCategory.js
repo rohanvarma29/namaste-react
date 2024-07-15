@@ -1,9 +1,8 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
-const RestaurantCategory = ({data})=>{
+const RestaurantCategory = ({data, showItems, setShowItems})=>{
     //console.log(data);
 
-    const [showItems, setShowItems] = useState(false);
     const handleClick = ()=>{
         setShowItems(!showItems);
     }
@@ -14,7 +13,7 @@ const RestaurantCategory = ({data})=>{
                 <div className="flex justify-between cursor-pointer" onClick={handleClick}>
                     <div 
                     className="font-bold" >
-                        {data?.title}
+                        {data?.title}({data?.itemCards.length})
                     </div>
                     <p className="font-semibold">⌄</p>
                 </div>
