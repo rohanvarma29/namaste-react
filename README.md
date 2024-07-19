@@ -29,3 +29,17 @@
 - dispatch(action)
 - reducer
 - Selector
+
+# Setting up testing in our app
+
+- Install React testing library
+- Installed jest
+- Installed Babel dependencies
+- Configure Babel
+- Configure parcel config file to disable babel transpilation which comes with parcel
+- Jest configuration
+- Jest - npx jest --init
+- Install jsdom library
+- Install @babel/preset-react - to make JSX works in test cases
+- Include @babel/preset-react inside my babel config
+- npm i -D @testing-library/jest-dom

@@ -10,7 +10,7 @@ const ItemList = ({item})=>{
     }
 
     return(
-        <div className="p-2 m-2  border-b-2 text-left flex justify-between">
+        <div data-testid="foodItems" className="p-2 m-2  border-b-2 text-left flex justify-between">
             <div className="w-9/12">
                 <p>{item?.card?.info?.name}</p>
                 <p className="text-sm">₹{item?.card?.info?.price ? 

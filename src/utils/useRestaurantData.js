@@ -17,7 +17,7 @@ const useRestaurantData = ()=>{
         const json = await data.json();
         console.log(json);
         //optional chaining
-        cleanData=json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+        const cleanData=json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
         setRestaurantList(cleanData);
         setFilteredRestaurant(cleanData);
     }

@@ -16,7 +16,7 @@ const Cart = ()=>{
     }
 
     return(
-        <div className="text-center mx-auto p-10 md:w-6/12  w-9/12 ">
+        <div data-testid="cartItems" className="text-center mx-auto p-10 md:w-6/12  w-9/12 ">
             <h1 className="font-bold text-2xl">Cart</h1>
 
             <button 

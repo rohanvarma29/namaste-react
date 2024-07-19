@@ -8,11 +8,11 @@ import { useSelector } from "react-redux";
 const Header = ()=>{
     const [btnName,setBtnName] = useState("Login");
     const {LogInUser} = useContext(UserContext);
-    console.log(LogInUser);
+    //console.log(LogInUser);
 
     //subscribing to the store using selector
     const cartItems = useSelector((store)=>store.cart.items);
-    console.log(cartItems);
+    //console.log(cartItems);
 
     return (
         <div className="flex justify-between p-2 bg-purple-100 shadow-lg">
